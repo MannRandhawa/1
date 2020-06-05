@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Login">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/welcomeback"/>
+    <EditText
+        android:inputType="textEmailAddress"
+        android:id="@+id/loginEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your E-mail"
+        android:layout_marginTop="50dp"/>
+    <EditText
+        android:id="@+id/loginPassword"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Yoyr Password"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/buttonForLogin"
+        android:layout_width="134dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="150dp"
+        android:text="Login"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp" />
+    <TextView
+        android:onClick="onClick"
+        android:id="@+id/notRegisterSignUpText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="70dp"
+        android:text="Not Register? Sign Up Here"/>
+
+</LinearLayout>
