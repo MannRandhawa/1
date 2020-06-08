@@ -5,19 +5,255 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#141413"
     tools:context=".Home">
 
-    <ImageView
-        android:layout_marginTop="40dp"
+    <TextView
+        android:id="@+id/cases"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:text="Statistics"
+        android:textColor="#FFF"
+        android:textSize="35dp" />
+
+    <LinearLayout
+        android:layout_width="422dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="4dp"
+        android:background="#a1a197"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector"
+            android:textColor="#FFFF"
+            android:text="All"
+            android:onClick="StatisticsHome"/>
+
+        <Button
+            android:id="@+id/Logout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="75dp"
+            android:textColor="#FFFF"
+            android:background="@drawable/selector"
+            android:text="Country"
+            android:onClick="CountriesList"/>
+
+        <Button
+            android:onClick="goToListPage"
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="75dp"
+            android:textColor="#FFFF"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/selector"
+            android:text="List" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/congrats"/>
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/Logout"
+        <TextView
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:text="SeLect Area"
+            android:textColor="#FFFF"
+            android:textSize="20dp" />
+
+
+        <Spinner
+            android:id="@+id/spinnerCountryName"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+            android:entries="@array/planets_array" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/countryName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="LogOut" />
+        android:text=""
+        android:textColor="#ffff"
+        android:layout_marginLeft="160dp"
+        android:textStyle="bold"
+        android:textSize="30dp"/>
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#8a8484"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Confirmed Cases"
+            android:textColor="#FFFF"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/totalCases"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textColor="#9df073"
+            android:textSize="38dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dailyIncrement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:textColor="#9df073"
+            android:textSize="22dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="157dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="191dp"
+            android:layout_height="147dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:background="#8a8484"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="210dp"
+            android:layout_height="147dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:background="#8a8484"></LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="191dp"
+            android:layout_height="147dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:background="#8a8484">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="210dp"
+            android:layout_height="147dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:background="#8a8484"></LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="57dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/kindpng_2483000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="13dp"
+                android:text="Stats"
+                android:textColor="#ffff"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="57dp"
+                android:layout_height="48dp"
+                android:src="@drawable/news"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="News"
+                android:textColor="#ffff"
+                android:textSize="20sp"
+                android:layout_marginLeft="8dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="104dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="57dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/heart" />
+
+            <TextView
+                android:layout_width="112dp"
+                android:layout_height="match_parent"
+                android:text="Symptoms"
+                android:textColor="#ffff"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="104dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="57dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/mobile" />
+
+            <TextView
+                android:layout_width="112dp"
+                android:layout_height="match_parent"
+                android:text="Help"
+                android:layout_marginLeft="25dp"
+                android:textColor="#ffff"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+

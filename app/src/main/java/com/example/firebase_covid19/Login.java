@@ -37,6 +37,8 @@ public class Login extends AppCompatActivity {
         loginButton = findViewById(R.id.buttonForLogin);
         notRegisterText = findViewById(R.id.notRegisterSignUpText);
 
+
+
         myAuthSateListner = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -70,7 +72,7 @@ public class Login extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()) {
-                                Toast.makeText(Login.this, "Login Erroe, Plaese Login Again", Toast.LENGTH_SHORT);
+                                Toast.makeText(Login.this, "Login Error, Plaese Login Again", Toast.LENGTH_SHORT);
                             } else {
                                 Intent intoHome = new Intent(Login.this, Home.class);
                                 startActivity(intoHome);

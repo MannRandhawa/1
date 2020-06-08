@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.firebase_covid19">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,9 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Symptoms"></activity>
+        <activity android:name=".RecyclerViewCountryList" />
+        <activity android:name=".AllCountries" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Home" />
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".WelcomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
